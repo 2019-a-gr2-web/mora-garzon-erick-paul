@@ -21,7 +21,7 @@ export class AppController {
 // @Controller(segmentoAccion)
   @Get('/hello-world') //Método HTTP
   getHello(): string {
-    //return this.appService.getHello();
+    //return this.appService.getSuma();
       return 'Hello world';
   }
 
@@ -29,19 +29,19 @@ export class AppController {
 
   @Post('/hola-mundo') //Método HTTP
   postHello(): string {
-      //return this.appService.getHello();
+      //return this.appService.getSuma();
       return 'Hola mundo';
   }
 
     @Put('/salut-monde') //Método HTTP
     putHello(): string {
-        //return this.appService.getHello();
+        //return this.appService.getSuma();
         return 'Salut Monde';
     }
 
     @Delete('/ciao-mondo') //Método HTTP
     deleteHello(): string {
-        //return this.appService.getHello();
+        //return this.appService.getSuma();
         return 'Ciao mondo';
     }
 
@@ -190,7 +190,7 @@ export class AppController {
 
 
   //@HttpCode(200)
-  /*postHello(){
+  /*postResta(){
     return 'Hola mundo en post';
   }*/
 }
