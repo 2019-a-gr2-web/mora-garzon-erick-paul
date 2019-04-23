@@ -15,6 +15,60 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+<<<<<<< HEAD
+  <component name="FUSProjectUsageTrigger">
+    <session id="512595973">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="5" />
+          <entry key="project.open.time.27" value="1" />
+          <entry key="project.open.time.3" value="2" />
+          <entry key="project.open.time.52" value="1" />
+          <entry key="project.open.time.9" value="1" />
+          <entry key="project.opened" value="5" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="gitignore" value="1" />
+          <entry key="html" value="2" />
+          <entry key="json" value="2" />
+          <entry key="ts" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="HTML" value="2" />
+          <entry key="JSON" value="2" />
+          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="TypeScript" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="gitignore" value="14" />
+          <entry key="html" value="73" />
+          <entry key="json" value="208" />
+          <entry key="ts" value="3978" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="HTML" value="73" />
+          <entry key="JSON" value="208" />
+          <entry key="PLAIN_TEXT" value="14" />
+          <entry key="TypeScript" value="3978" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.js.language.service.starts">
+        <counts>
+          <entry key="TypeScriptServerServiceImpl" value="4" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+=======
+>>>>>>> 80a737272ce001bbca1a6e7868687ef754dcd41f
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
@@ -33,10 +87,18 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/deberes/01-calculadora/api-web-calc/src/app.controller.ts">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+            <state relative-caret-position="194">
+              <caret line="158" column="53" selection-start-line="158" selection-start-column="53" selection-end-line="158" selection-end-column="53" />
+              <folding>
+                <element signature="e#0#124#0" expanded="true" />
+                <element signature="n#!!block;n#adivina#0;n#AppController#0" />
+=======
             <state relative-caret-position="-25">
               <caret line="34" column="38" selection-start-line="34" selection-start-column="38" selection-end-line="34" selection-end-column="38" />
               <folding>
                 <element signature="e#0#124#0" expanded="true" />
+>>>>>>> 80a737272ce001bbca1a6e7868687ef754dcd41f
               </folding>
             </state>
           </provider>
@@ -45,8 +107,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/main.ts">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+            <state relative-caret-position="136">
+              <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+=======
             <state relative-caret-position="48">
               <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+>>>>>>> 80a737272ce001bbca1a6e7868687ef754dcd41f
               <folding>
                 <element signature="e#0#43#0" expanded="true" />
               </folding>
@@ -84,10 +151,13 @@
         <option value="$PROJECT_DIR$/01-http/01-servidor-web-estatico/fin.html" />
         <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/.gitignore" />
         <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/ejemplo.json" />
-        <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/main.ts" />
         <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/app.controller.ts" />
+<<<<<<< HEAD
+        <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/main.ts" />
+=======
         <option value="$PROJECT_DIR$/deberes/01-calculadora/api-web-calc/.gitignore" />
         <option value="$PROJECT_DIR$/deberes/01-calculadora/api-web-calc/src/app.controller.ts" />
+>>>>>>> 80a737272ce001bbca1a6e7868687ef754dcd41f
       </list>
     </option>
   </component>
@@ -189,13 +259,21 @@
       <workItem from="1554924456094" duration="5025000" />
       <workItem from="1555442700179" duration="5934000" />
       <workItem from="1555528556235" duration="6118000" />
+<<<<<<< HEAD
+      <workItem from="1556046382202" duration="5922000" />
+=======
       <workItem from="1555713735794" duration="6258000" />
       <workItem from="1555727876951" duration="10213000" />
+>>>>>>> 80a737272ce001bbca1a6e7868687ef754dcd41f
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
+    <option name="totallyTimeSpent" value="23122000" />
+=======
     <option name="totallyTimeSpent" value="33671000" />
+>>>>>>> 80a737272ce001bbca1a6e7868687ef754dcd41f
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -221,7 +299,11 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32935154" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
+<<<<<<< HEAD
+      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.29475102" />
+=======
       <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.36741215" />
+>>>>>>> 80a737272ce001bbca1a6e7868687ef754dcd41f
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="TypeScript" order="11" weight="0.32935154" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -254,6 +336,9 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/ejemplo.json">
+=======
     <entry file="file://$PROJECT_DIR$/deberes/01-calculadora/api-web-calc/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -268,6 +353,7 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/main.ts">
+>>>>>>> 80a737272ce001bbca1a6e7868687ef754dcd41f
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="48">
           <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
@@ -286,17 +372,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/deberes/01-calculadora/api-web-calc/src/main.ts">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="136">
+          <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+=======
         <state>
+>>>>>>> 80a737272ce001bbca1a6e7868687ef754dcd41f
           <folding>
             <element signature="e#0#43#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/package.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/app.controller.ts">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="194">
+          <caret line="158" column="53" selection-start-line="158" selection-start-column="53" selection-end-line="158" selection-end-column="53" />
+=======
         <state relative-caret-position="24">
           <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
+>>>>>>> 80a737272ce001bbca1a6e7868687ef754dcd41f
           <folding>
             <element signature="e#0#124#0" expanded="true" />
             <element signature="n#!!block;n#adivina#0;n#AppController#0" />
