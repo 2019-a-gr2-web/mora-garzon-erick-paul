@@ -2,6 +2,7 @@ import {Controller, Delete, Get, HttpCode, Post, Put, Headers, Query, Param, Bod
 import { AppService } from './app.service';
 
 import * as Joi from '@hapi/joi';
+import {log} from "util";
 
 const Joi = require('@hapi/joi');
 
@@ -190,6 +191,24 @@ export class AppController {
 
 
 
+    @Get('inicio')
+    inicio(
+        @Response() res
+    ){
+      return res.render('inicio');
+
+    }
+
+
+
+
+
+
+
+
+
+
+
     @Get('/setNombre')
     setNombre(@Request() request, @Query() query, @Response() response){
         console.log(request.cookies);
@@ -289,3 +308,208 @@ objeto['propiedad3'] = 'valor3';
 //eliminar propiedad:
 delete objeto.propiedad3; // ->destruir, peligroso
 objeto.propiedad3 = undefined; // ->destruir, no peligroso
+
+
+
+
+
+function holaMundo(){
+    console.log('Hola mundo');
+}
+const respuestaHolaMundo = holaMundo(); // undefined
+console.log('resp hola mundo: ', respuestaHolaMundo);
+
+function suma(a:number,b:number):number {
+    return a+b;
+}
+
+const respuestaSuma = suma(1,2); //undefined
+console.log('Resp suma: ', respuestaSuma);
+
+
+//Condicionales
+//Truty -> true
+//Falsy -> false
+if(true){ //truty
+    console.log('Verdadero');
+
+}
+else{
+    console.log('falso')
+}
+
+if(false){ //falsy
+    console.log('Verdadero');
+
+}
+else{
+    console.log('falso')
+}
+
+
+if(""){ //Falsy
+    console.log('Verdadero "" ');
+
+}
+else{
+    console.log('falso "" ')
+}
+
+if("a"){ //Truty
+    console.log('Verdadero "a" ');
+
+}
+else{
+    console.log('falso "a" ')
+}
+
+if(0){ //Falsy
+    console.log('Verdadero 0 ');
+
+}
+else{
+    console.log('falso 0 ')
+}
+
+if("0"){ //Truty
+    console.log('Verdadero "0" ');
+
+}
+else{
+    console.log('falso "0" ')
+}
+
+if(-1){ //Truty
+    console.log('Verdadero -1 ');
+
+}
+else{
+    console.log('falso -1 ')
+}
+
+if(1){ //truty
+    console.log('Verdadero 1 ');
+
+}
+else{
+    console.log('falso 1 ')
+}
+
+if(undefined){ //falsy
+    console.log('Verdadero undefined ');
+
+}
+else{
+    console.log('falso undefined ')
+}
+
+if(null){ //falsy
+    console.log('Verdadero null ');
+
+}
+else{
+    console.log('falso null ')
+}
+
+if({}){ //truty
+    console.log('Verdadero null ');
+
+}
+else{
+    console.log('falso null ')
+}
+
+
+
+//Operadores de arreglos en JS
+
+const arreglo:any =[
+    function (){return '0'},
+    1,'A',true,null,{},[]];
+
+const arregloNumeros = [1,2,3,4,5,6];
+
+// 1) Impriman en consola todos los elementos
+
+const arregloNumerosForEach = [1,2,3,4,5,6];
+arregloNumerosForEach.forEach(
+    function (valorActual, indice, arreglo) {
+        console.log(`Valor: ${valorActual}`)
+        //console.log(`Indice: ${indice}`)
+        //console.log(`Arreglo: ${arreglo}`)
+    }
+);
+
+
+const rForEach = arregloNumerosForEach.forEach(
+    function (valorActual) {
+        console.log(`Valor: ${valorActual}`)
+
+    }
+);
+console.log(`Respuesta foreach: ${rForEach}`)
+
+
+
+const r2ForEach = arregloNumerosForEach.forEach(
+    n => console.log(`${n}`)
+);
+console.log(`Respuesta foreach: ${r2ForEach}`)
+
+
+
+// 2) Sumar 2 a los pares y 1 a los impares
+const arregloNumerosMap = [1,2,3,4,5,6];
+
+const  rMap = arregloNumerosMap.map( // Devolver el nuevo valor de ese elemento
+    (valorActual)=>{
+        const esPar = valorActual%2==0;
+        if(esPar){
+            const nuevoValor = valorActual +2;
+            return nuevoValor;
+
+        }else{
+            const nuevoValor = valorActual +1;
+            return nuevoValor;
+        }
+    }
+);
+console.log(`Respuesta map: ${rMap}`); //nuevo arreglo
+
+// 3) Encontrar el numero 4
+
+const arregloNumerosFind = [1,2,3,4,5,6];
+
+const rFind = arregloNumerosFind.find( //condicion para devolver ese elemento
+    (valorActual)=>{
+        return valorActual == 4;
+    }
+);
+console.log(`Respuesta FIND: ${rFind}`);
+
+// 4) Filtrar numeros menores a 5
+
+const arregloNumerosFilter = [1,2,3,4,5,6];
+
+const rFilter = arregloNumerosFilter.filter( //Condicion true: -> Agrega al arreglo
+                                            //Condicion false: -> Se omite del arreglo
+    (valorActual)=>{
+        return valorActual < 5;
+    }
+);
+console.log(`Respuesta Filter: ${rFilter}`);
+
+
+// 5) Si todos los valores son positivos
+
+// 6) Algun valor es menor a 2
+
+// 7) Sumar todos los valores
+
+// 8) Restar todos los valores de 100
+
+// 1.1) Sumar 10 a todos
+// 1.2) Filtren a los mayores a 15
+// 1.3) Si hay algún número mayor a 30
+
+
