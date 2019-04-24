@@ -189,7 +189,27 @@ export class AppController {
 
 
 
-  //@HttpCode(200)
+
+    @Get('/setNombre')
+    setNombre(@Request() request, @Query() query, @Response() response){
+        console.log(request.cookies);
+        const cookies = request.cookies; //JSON
+
+        const nombreUsuario = (request.cookies).nombre;
+        const resultado = (request.cookies).numero;
+        response.cookie('nombreUsuario', query.nombreUsuario);
+        response.send(
+            {
+                'nombreUsuario': nombreUsuario,
+                'resultado':  resultado
+            });
+
+    }
+
+
+
+
+    //@HttpCode(200)
   /*postResta(){
     return 'Hola mundo en post';
   }*/
