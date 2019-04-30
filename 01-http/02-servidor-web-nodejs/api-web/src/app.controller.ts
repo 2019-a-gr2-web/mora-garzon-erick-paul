@@ -502,14 +502,99 @@ console.log(`Respuesta Filter: ${rFilter}`);
 
 // 5) Si todos los valores son positivos
 
+const arregloNumerosEvery = [1,2,3,4,5,6];
+
+const respuestaEvery = arregloNumerosEvery.every( //si todos cumplen, devuelve true
+                            //si alguno no cumple, devuelve false
+    (valorActual)=>{
+        return valorActual>0
+    }
+);
+console.log(respuestaEvery); //true
+
+
 // 6) Algun valor es menor a 2
+
+const arregloNumerosSome = [1,2,3,4,5,6];
+
+arregloNumerosSome.some( //si alguno cumple la condición, devuelve true
+                            //si todos no cumplen, devuelve false
+    (valorActual)=>{
+        return valorActual < 2
+    }
+);
 
 // 7) Sumar todos los valores
 
+const arregloNumerosReduce = [1,2,3,4,5,6];
+const valorDondeEmpiezaCalculo = 0;
+
+const respuestaReduce = arregloNumerosReduce.reduce(
+    /*(0, 1)=>{
+        return 0 +1*/
+    (acumulado, valorActual)=>{
+        return acumulado + valorActual;
+
+    },
+valorDondeEmpiezaCalculo
+);
+console.log(respuestaReduce);
+
 // 8) Restar todos los valores de 100
+
+const arregloNumerosReduce3 = [1,2,3,4,5,6];
+const valorDondeEmpieza3 = 100;
+
+const respuestaReduce3 = arregloNumerosReduce.reduce(
+    (acumulado, valorActual)=>{
+        //if(valorActual<4) {
+            return valorDondeEmpieza3 - valorActual;
+       /* }
+        else{
+            return acumulado + valorActual * 1.15 + 3;
+        }*/
+
+    },
+    valorDondeEmpieza3
+);
+console.log(`Respuesta reduce 3: ${respuestaReduce3}`);
+
+//numeros menores a 4: +(10%) + (5)
+//>= 4: +(15%) + (3)
+
+const arregloNumerosReduce2 = [1,2,3,4,5,6];
+
+const respuestaReduce2 = arregloNumerosReduce.reduce(
+    (acumulado, valorActual)=>{
+        if(valorActual<4) {
+            return acumulado + valorActual * 1.1 + 5;
+        }
+        else{
+            return acumulado + valorActual * 1.15 + 3;
+        }
+
+    },
+    valorDondeEmpiezaCalculo
+);
+console.log(`Respuesta reduce 2: ${respuestaReduce2}`);
+
+
 
 // 1.1) Sumar 10 a todos
 // 1.2) Filtren a los mayores a 15
 // 1.3) Si hay algún número mayor a 30
 
+const arregloEjercicio = [1,2,3,4,5,6];
+
+arregloEjercicio.map((valorActual)=>{
+    return valorActual+10;
+}).filter(
+    (valorActual) => {
+        return valorActual > 15;
+    }
+).some(
+    (valorActual) => {
+        return valorActual > 30;
+    }
+);
 
