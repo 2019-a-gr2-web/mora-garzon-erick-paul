@@ -1,6 +1,20 @@
 
+
 <% const nombre = 'erfge'; //codigo JS %>
 <%= nombre%>
 
 <% const arreglo = [1,2,3,4,5]; %>
-<% %>
+<%= arreglo%>
+
+<% const objeto = {nombre:'Erick'}; %>
+<%= objeto.nombre%>
+
+<%arreglo.forEach((valorActual)=>{%>
+<p>Numero:<%=valorActual%></p>
+<% })%>
+
+<ol>
+<%arreglo.forEach((valorActual)=>{%>
+    <li>Numero:<%=valorActual%></li>
+<% })%>
+</ol>

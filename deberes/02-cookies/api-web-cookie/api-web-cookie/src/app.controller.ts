@@ -1,8 +1,8 @@
 import {Controller, Delete, Get, HttpCode, Post, Put, Headers, Query, Param, Body, Request, Response} from '@nestjs/common';
 import { AppService } from './app.service';
 
-import * as Joi from '@hapi/joi';
-const Joi = require('@hapi/joi');
+//import * as Joi from '@hapi/joi';
+//const Joi = require('@hapi/joi');
 
 @Controller('/api')
 export class AppController {
