@@ -14,7 +14,7 @@ async function bootstrap() {
   //app.set('view engine', 'ejs');
     //app.engine('view engine', 'ejs');
     app.setViewEngine('ejs');
-    app.setBaseViewsDir(join( __dirname, '..', 'views'))
+    app.setBaseViewsDir(join( __dirname, '..', 'views'));
 
 
   await app.listen(3000);
