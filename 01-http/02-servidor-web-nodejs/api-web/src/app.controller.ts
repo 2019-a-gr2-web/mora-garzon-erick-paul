@@ -219,6 +219,21 @@ export class AppController {
 
 
 
+    @Get('estilos') //endpoint renderizar
+    estilos(
+        @Response() res
+    ){
+        return res.render(
+            'peliculas/estilos');
+        
+
+    }
+
+
+
+
+
+
 
 
 
