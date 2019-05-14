@@ -14,7 +14,6 @@ const Joi = require('@hapi/joi');
 // @Controller(segmentoInicial)
 //
 
-
 @Controller('/api')
 export class AppController {
   constructor(private readonly appService: AppService) {}
