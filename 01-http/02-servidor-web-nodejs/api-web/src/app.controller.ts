@@ -16,6 +16,8 @@ const Joi = require('@hapi/joi');
 
 @Controller('/api')
 export class AppController {
+    arregloUsuarios = [];
+
   constructor(private readonly appService: AppService) {}
 
 // @Controller(segmentoAccion)
@@ -237,7 +239,7 @@ export class AppController {
 
 
 
-
+/*
     @Get('/setNombre')
     setNombre(@Request() request, @Query() query, @Response() response){
         console.log(request.cookies);
@@ -253,7 +255,12 @@ export class AppController {
             });
 
     }
+*/
 
+
+
+
+    
 
 
 
