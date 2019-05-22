@@ -12,7 +12,7 @@
 
     <style>
         .container1{
-            background: lightseagreen;
+            background: darkcyan;
         }
 
         .container2{
@@ -25,6 +25,10 @@
 
         .container4{
             background: gray;
+        }
+
+        .container5{
+            background: darkslategrey;
         }
 
         .btn-black{
@@ -45,9 +49,14 @@
             text-align: left;
         }
         .separador{
-            margin-top: 24px;
-            margin-bottom: 16px;
-            background: gray;
+            margin-left: 44px;
+            margin-right: 26px;
+
+        }
+
+        .separador2{
+            margin-top: 100px;
+            margin-bottom: 100px;
         }
 
         .button-style {
@@ -76,23 +85,27 @@
 
         .button-style-sesion {
             padding: .875rem 1.25rem;
-            background: lightseagreen;
+            background: darkcyan;
             font-weight: 500;
             font-size: .8125rem;
             font-family: "Roboto",sans-serif;
             color: white;
-            position:relative;
-            right:80%;
-            left:45%;
+            position:absolute;
+            right: 0;
+            width: 150px;
+
         }
         .imagen-style{
-            width: 394px;
-            height: 259px;
+            width: 444px;
+            height: 309px;
         }
 
         .imagen-style2{
-            width: 194px;
-            height: 359px;
+
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
 
          }
 
@@ -110,18 +123,16 @@
 <body>
 <div class="container1">
     <div class="row">
-        <div class="col-sm-1">
-        </div>
+
         <div class="col-sm-4">
 
-
+            <img src="/imagenes/blogger.png" alt="blog">
                 <a href="">Blogger</a>
 
+
         </div>
 
-        <div class="col-sm-3">
-            <button type="button" class="button-style-sesion">INICIAR SESIÓN</button>
-        </div>
+        <a href="" class="button-style-sesion">INICIAR SESIÓN</a>
 
     </div>
 </div>
@@ -131,34 +142,42 @@
             <h3>Escribe sobre lo que te apasiona y a tu manera</h3>
             <p>Crea un blog atractivo y original. Es fácil y gratuito.</p>
             <button type="button" class="button-style">CREA TU BLOG</button>
-            <div class="row">
-                <div class="col-sm-3">
-                </div>
-
-                <div class="col-sm-3">
-                </div>
-            </div>
-
 
         </div>
+
+        <div class="separador2"></div>
+
+
+
+        <img class="imagen-style2" src="/imagenes/imagen-blog.png" alt="blog">
+
+
+
+
+
     </div>
 </div>
 
 <div class="container2">
+
     <div class="row">
+
         <div class="col-sm-1">
+
         </div>
 
         <div class="col-sm-6">
+            <div class="separador2"></div>
             <h3>Elige el diseño perfecto</h3>
             <p>Crea un blog atractivo y adaptado a tu estilo. Dispones de un surtido de plantillas para elegir, fáciles de usar, con diseños flexibles y montones de imágenes de fondo, o puedes diseñar un blog totalmente nuevo.</p>
 
         </div>
 
                 <div class="col-sm-3">
-                    <a href="">
-                        <img class="imagen-style" src="https://lh3.googleusercontent.com/bUhprbXch3TuFCy3U-pIEdPYpPwebvXk05ZJFrR6if1lb8bP4kYEQzyb9haVRA=w384">
-                    </a>
+                    <div class="separador2"></div>
+
+                        <img class="imagen-style" src="/imagenes/img-dis.png" alt="disenio">
+
                 </div>
     </div>
 </div>
@@ -168,21 +187,24 @@
         <div class="col-sm-1">
         </div>
         <div class="col-sm-3">
+            <div class="separador2"></div>
             <h3>Consigue un dominio gratuito</h3>
             <p>Encuentra el alojamiento perfecto para tu blog. Consigue un dominio gratuito blogspot.com o compra uno personalizado en un par de clics.</p>
 
         </div>
 
         <div class="col-sm-3">
-            <a href="">
-                <img class="imagen-style" src="https://lh3.googleusercontent.com/W0R6Lf3Id13mEqJu9di9w-or4BARQoZLIEpesrMvKGwc6kBw2sfygoy2vWzkcA=w384">
-            </a>
+            <div class="separador2"></div>
+
+                <img class="imagen-style" src="/imagenes/img-dominio.png" alt="dominio">
+
         </div>
 
         <div class="col-sm-3">
-            <a href="">
-                <img class="imagen-style" src="https://lh3.googleusercontent.com/W0R6Lf3Id13mEqJu9di9w-or4BARQoZLIEpesrMvKGwc6kBw2sfygoy2vWzkcA=w384">
-            </a>
+            <div class="separador2"></div>
+
+                <img class="imagen-style" src="/imagenes/img-dominio.png" alt="dominio">
+
         </div>
 
 
@@ -194,12 +216,14 @@
 
 
         <div class="col-sm-4">
-            <a href="">
-                <img class="imagen-style" src="https://lh3.googleusercontent.com/Ez2JNPaTvHBmThI-ACqiyu5UesCLVrPSCUYsV5e5hSsz1xr3W5rQZy4jaI-mAMQ=w768">
-            </a>
+            <div class="separador2"></div>
+
+                <img class="imagen-style" src="/imagenes/img-dinero.png" alt="dinero">
+
         </div>
 
         <div class="col-sm-6">
+            <div class="separador2"></div>
             <h3>Gana dinero</h3>
             <p>Sácale un rendimiento a tu esfuerzo. De forma automática, Google AdSense puede mostrar en tu blog anuncios relevantes, orientados a tus lectores: así obtienes ingresos mientras escribes sobre lo que te apasiona.</p>
 
@@ -214,15 +238,17 @@
         <div class="col-sm-1">
         </div>
         <div class="col-sm-6">
+            <div class="separador2"></div>
             <h3>Conoce a tu audiencia</h3>
             <p>Descubre qué entradas tienen más éxito con los análisis integrados en Blogger. Puedes ver el origen de tus lectores y qué les interesa. Si quieres saber más detalles, tienes la opción de conectar tu blog directamente con Google Analytics.</p>
 
         </div>
 
         <div class="col-sm-3">
-            <a href="">
-                <img class="imagen-style" src="https://lh3.googleusercontent.com/9cbUVdUGgINO5xuTvk_SxU2eiZPu1PtRFMi3JhSMvYO7AOQnPBVpALNJnb8P=w768">
-            </a>
+            <div class="separador2"></div>
+
+            <img class="imagen-style" src="/imagenes/img-mundo.png" alt="mundo">
+
         </div>
 
 
@@ -235,16 +261,16 @@
         <div class="col-sm-1">
         </div>
         <div class="col-sm-6">
-
+            <div class="separador2"></div>
             <h3>Aférrate a tus recuerdos</h3>
             <p>Guarda los momentos que importan. Blogger te permite guardar con toda la seguridad y gratis miles de entradas, fotos y otras cosas con Google.</p>
 
         </div>
 
         <div class="col-sm-3">
-            <a href="">
-                <img class="imagen-style" src="https://lh3.googleusercontent.com/ytR9Qe3qeOc6qWzwP8N50Jew_RkP68A3gaH77GwUE4EA0fHhg5E6u0mihK6Tntc=w384">
-            </a>
+            <div class="separador2"></div>
+
+            <img class="imagen-style" src="/imagenes/img-recuerdos.png" alt="recuerdo">
         </div>
 
     </div>
@@ -258,9 +284,11 @@
         </div>
 
         <div class="col-sm-6">
+            <div class="separador2"></div>
             <h3>Súmate a millones de blogueros</h3>
             <p>Tanto si quieres compartir tus conocimientos como dar las últimas noticias o decir lo que se te pase por la cabeza, en Blogger estás muy bien acompañado. Regístrate para saber por qué millones de personas han escrito aquí sobre lo que les apasiona.</p>
             <button type="button" class="button-style2">CREA TU BLOG</button>
+            <div class="separador2"></div>
 
                 <div class="col-sm-3">
                 </div>
@@ -269,24 +297,27 @@
     </div>
 </div>
 
-<div class="container4">
+<div class="container5">
 
     <div class="row">
         <div class="separador"></div>
-        <div class="col-sm-3">
+        <div class="col-sm-2">
+            <div class="separador2"></div>
             <h4>Ayuda</h4>
             <li>Centro de Ayuda</li>
             <li>Foro de Ayuda</li>
-            <li>Condiciones de servicio</li>
+            <li>Tutoriales en video</li>
         </div>
 
-        <div class="col-sm-3">
+        <div class="col-sm-2">
+            <div class="separador2"></div>
             <h4>Comunidad</h4>
             <li>Blogger Buzz</li>
 
         </div>
 
         <div class="col-sm-3">
+            <div class="separador2"></div>
             <h4>Desarrolladores</h4>
             <li>API de Blogger</li>
             <li>Foro de desarrolladores</li>
@@ -298,36 +329,29 @@
 </div>
 
 
-<div class="container4">
-    <div class="row">
-
-        <div class="col-sm-3">
-
-        </div>
-
-        <div class="col-sm-3">
-
-        </div>
-
-        <div class="col-sm-3">
-
-        </div>
-
-    </div>
-    <div class="separador"></div>
+<div class="container5">
 
     <div class="row">
+        <div class="separador"></div>
+        <div class="col-sm-2">
+            <div class="separador2"></div>
+            <a href="">Condiciones de servicio</a>
 
-        <div class="col-sm-3">
-            <h6>Condiciones de servicio</h6>
+            <div class="separador2"></div>
         </div>
 
-        <div class="col-sm-3">
-            <h6>Privacidad</h6>
+        <div class="col-sm-1">
+            <div class="separador2"></div>
+            <a href="">Privacidad</a>
+
+            <div class="separador2"></div>
         </div>
 
-        <div class="col-sm-3">
-            <h6>Politica de contenidos</h6>
+        <div class="col-sm-2">
+            <div class="separador2"></div>
+            <a href="">Politica de contenidos</a>
+
+            <div class="separador2"></div>
 
         </div>
 
