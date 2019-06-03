@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <title>Inicio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+    <style>
+        .encabezado{
+            background: gray;
+            color: white;
+        }
+        .container{
+            background: white;
+        }
+        .btn, .btn-salir {
+            padding-left: 28px;
+            padding-right: 28px;
+
+            background: seagreen;
+            font-weight: 800;
+            font-size: .8125rem;
+            font-family: "Roboto",sans-serif;
+            color: white;
+            position:relative;
+            right:50%;
+            left:45%;
+        }
+
+        .btn{
+            background:darkslategrey;
+            color:white;
+        }
+
+        .separador{
+            margin-top: 100px;
+            margin-bottom: 100px;
+        }
+    </style>
+</head>
+
+<body>
+<!--Reutilización -->
+<div class="encabezado">
+    <div class="row">
+        <div class="col-sm-8">
+            <a> Aplicación pacientes-medicamentos</a>
+        </div>
+        <div class="col-sm-2">
+            <a>  Usuario: <%= nombre%></a>
+        </div>
+        <div class="col-sm-2">
+        <form action="/api/salir" method="POST">
+            <button class="btn-salir">Salir</button>
+        </form>
+        </div>
+    </div>
+</div>
+<!--Fin reutilización -->
+
+<div class="container">
+    <div class="separador"></div>
+        <div class="row">
+            <div class="col-md-12">
+                <form action="/api/pacientes" method="GET">
+                    <button type="submit" class="btn">Gestionar pacientes</button>
+                </form>
+            </div>
+        </div>
+</div>
+
+
+</body>
+</html>

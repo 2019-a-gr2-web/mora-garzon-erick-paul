@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Login</title>
+    <meta charset ="UTF-8">
+
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <style>
+        html,body{
+            font-family:"Century Gothic","Muli", sans-serif !important;
+        }
+        body{
+            padding-top: 40px;
+        }
+        .button-style {
+            padding-left: 28px;
+            padding-right: 28px;
+
+            background: orange;
+            font-weight: 800;
+            font-size: .8125rem;
+            font-family: "Roboto",sans-serif;
+            color: white;
+            position:relative;
+            right:50%;
+            left:45%;
+        }
+
+        .separador{
+            margin-top: 100px;
+            margin-bottom: 100px;
+        }
+    </style>
+
+</head>
+
+<body>
+<div class="container">
+    <div class="row">
+        <form action="/api/login" method="post">
+            <div class="separador"></div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-sm-3"><h3></h3></div>
+                    <div class="col-sm-6"><h3><label for="nombre">Nombre</label></h3></div>
+                    <div class="col-sm-3"><h3><input type="text" id="nombre" name="nombre" placeholder="Nombre"></h3></div>
+
+                </div>
+                <div class="separador"></div>
+                <div class="row">
+                    <div class="col-sm-3"><h3></h3></div>
+                    <div class="col-sm-9"><button class="button-style">Login</button></div>
+
+                </div>
+
+            </div>
+
+        </form>
+    </div>
+</div>
+</body>
+</html>
