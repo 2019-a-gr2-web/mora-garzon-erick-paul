@@ -116,4 +116,12 @@ export class AppService {
     return this.bddMedicamentos;
   }
 
+  buscarMedPorNombre(nombre: string):Medicamento[] {
+    return this.bddMedicamentos.filter(
+        (medicamento)=>{
+          return medicamento.nombre.includes(nombre);
+        }
+    );
+  }
+
 }

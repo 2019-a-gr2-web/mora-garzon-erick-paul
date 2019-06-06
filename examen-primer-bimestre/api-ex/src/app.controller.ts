@@ -96,7 +96,7 @@ export class AppController {
   }
 
   @Post('/buscarPaciente')
-  postBuscarPaciente(@Response() res, @Body('busquedaConductor') nombre: string, @Request() request) {
+  postBuscarPaciente(@Response() res, @Body('busquedaPaciente') nombre: string, @Request() request) {
     const cookieSegura = request.signedCookies;
     var arregloPacientes=this.appService.buscarPacientePorNombre(nombre);
     if(arregloPacientes!=null){
@@ -162,6 +162,17 @@ export class AppController {
   postEliminarMedicamento(@Response() res, @Body('id') id: number, @Request() request) {
     this.appService.eliminarMedicamentoPorId(Number(id));
     res.redirect('/api/medicamento/:1');
+  }
+
+  @Post('/buscarMedicamento')
+  postBuscarMedicamento(@Response() res, @Body('busquedaMedicamento') nombre: string, @Request() request) {
+    const cookieSegura = request.signedCookies;
+    var arregloMed=this.appService.buscarMedPorNombre(nombre);
+    if(arregloMed!=null){
+      res.render('gestionar_medicamento', {arregloMed:arregloMed,nombre:cookieSegura.nombreUsuario})
+    }else {
+      res.redirect('/api/medicamento/:1');
+    }
   }
 
 
