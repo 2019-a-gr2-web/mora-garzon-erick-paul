@@ -23,7 +23,7 @@ export class TragosController {
     crearTrago(
         @Res() res
     ){
-        res.render('tragos/crear-editar')
+        res.render('tragos/crearPaciente-editar')
     }
 
 
