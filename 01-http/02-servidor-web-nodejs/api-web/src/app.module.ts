@@ -2,10 +2,14 @@ import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TragosModule } from "./tragos/tragos.module";
+import { DistribuidorModule } from "./distribuidor/distribuidor.module";
+import { FiestaModule } from "./fiesta/fiesta.module";
 import { TypeOrmModule } from '@nestjs/typeorm'; //para usar orm
 
 @Module({
-  imports: [TragosModule, //modulos
+  imports: [TragosModule,
+            DistribuidorModule,
+            FiestaModule,//modulos
 
         TypeOrmModule.forRoot({
             name: 'default', //Nombre cadena de conexion por defecto de TYPEORM
