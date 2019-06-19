@@ -1,21 +1,32 @@
 
+
+<% const nombreUsuario = 'Erick';%>
+<%- include('../componentes/menu/menu', {nombre:nombreUsuario})%>
+
+
+
+
+
+
+
+<%const existeMensaje = mensaje %>
+
+<% if (existeMensaje) {%>
+    <p>ERROR EN FORMULARIO <%=mensaje%>!!</p>
+<%}%>
+
+
 <h1>Formulario de Creacion</h1>
 <p>Crear un nuevo trago.</p>
 
 <form
-        action="api/traguito/crear"
+        action="crear"
         method="post"
 >
     <label for="nombreId">Nombre</label>
-    <input id="nombreId" name="q" type="text">
+    <input id="nombreId" name="nombre" type="text">
 
-    <label for="nombreId">Id</label>
-    <input id="nombreId"
-           name="nombre"
-           type="text"
-           value="1"
-           hidden
-    >
+
 
     <br>
     <label for="tipoId">Tipo trago</label>
@@ -67,3 +78,9 @@
 
     <button>Enviar información</button>
 </form>
+
+
+
+
+
+<%- include('../componentes/footer/footer')%>
