@@ -1,5 +1,4 @@
-import {Column, Entity, PrimaryGeneratedColumn} from "typeorm";
-import {ManyToOne} from "typeorm/browser";
+import {Column, Entity, ManyToOne, PrimaryGeneratedColumn} from "typeorm";
 import {TragosEntity} from "../tragos/tragos.entity";
 
 @Entity('db_fiesta') // Nombre tabla

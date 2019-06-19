@@ -1,5 +1,4 @@
-import {Column, Entity, PrimaryGeneratedColumn} from "typeorm";
-import {ManyToOne, OneToMany} from "typeorm/browser";
+import {Column, Entity, ManyToOne, OneToMany, PrimaryGeneratedColumn} from "typeorm";
 import {DistribuidorEntity} from "../distribuidor/distribuidor.entity";
 import {FiestaEntity} from "../fiesta/fiesta.entity";
 
@@ -32,7 +31,8 @@ export class TragosEntity {
     @Column({
         type: 'date',
         name: 'fecha_caducidad',
-    })
+        default: '2019-06-19'
+    }) //opcional
     fechaCaducidad: Date;
 
     @Column({
@@ -40,7 +40,8 @@ export class TragosEntity {
         precision: 10,
         scale:2,
         name: 'precio',
-    })
+        nullable: true
+    }) //opcional
     precio: number;
 
 

@@ -22,8 +22,9 @@ import { TypeOrmModule } from '@nestjs/typeorm'; //para usar orm
             entities: [__dirname + '/**/*.entity{.ts,.js}'],
             synchronize: true,
             //extra:{
-                insecureAuth:true
+                insecureAuth:true,
             //}
+            dropSchema: false
         }),
     ],
   controllers: [AppController],

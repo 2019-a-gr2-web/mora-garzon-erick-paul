@@ -1,5 +1,4 @@
-import {Column, Entity, PrimaryGeneratedColumn} from "typeorm";
-import {OneToMany} from "typeorm/browser";
+import {Column, Entity, OneToMany, PrimaryGeneratedColumn} from "typeorm";
 import {TragosEntity} from "../tragos/tragos.entity";
 
 @Entity('db_distribuidor') // Nombre tabla
