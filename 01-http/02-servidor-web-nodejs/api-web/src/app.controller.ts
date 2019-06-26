@@ -81,10 +81,10 @@ export class AppController {
         @Res() res
     ){
         if(session.username){
-            res.render('/api/protegida',{
+            res.render('protegida',{
                 nombre:session.username});
         }else{
-            res.redirect('/login');
+            res.redirect('/api/login');
         }
     }
 
