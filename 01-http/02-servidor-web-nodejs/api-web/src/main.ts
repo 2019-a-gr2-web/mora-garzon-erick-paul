@@ -7,6 +7,9 @@ import * as express from 'express';
 import * as path from 'path';
 import * as favicon from 'serve-favicon';
 
+import * as session from 'express-session'; // Typescript
+const FileStore = require('session-file-store')(session); // Nodejs
+
 //import * as cookieParser from 'cookie-parser';
 const cookieParser = require('cookie-parser');
 
@@ -20,6 +23,19 @@ async function bootstrap() {
     //app.engine('view engine', 'ejs');
     app.use(favicon(path.join(__dirname, '..', 'publico', 'imagenes', 'pokebola.ico')));
 
+
+    app.use(
+        session({
+            name: 'server-session-id',
+            secret: 'No sera de tomar un traguito',
+            resave: false,
+            saveUninitialized: true,
+            cookie: {
+                secure: false
+            },
+            store: new FileStore()
+        })
+    );
 
     app.use(cookieParser('Secreto'));
 
