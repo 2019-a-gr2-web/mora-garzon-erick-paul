@@ -1,7 +1,7 @@
 import {Injectable} from "@nestjs/common";
 import {Trago} from "./interfaces/trago";
 import {TragosEntity} from "./tragos.entity";
-import {Repository} from "typeorm";
+import {DeleteResult, Repository, UpdateResult} from "typeorm";
 import {InjectRepository} from "@nestjs/typeorm";
 import {error} from "util";
 
@@ -100,7 +100,12 @@ export class TragosService {
         return this.bddTragos;
     }
 
-    actualizar(tragoActualizado: Trago, id:number):Trago[] {
+    eliminar(id: number):Promise<DeleteResult> {
+        const objetoEntidad = this._tragosRepository.delete(id);
+        return objetoEntidad;
+    }
+
+    /*actualizar(tragoActualizado: Trago, id:number):Trago[] {
 
         const indice = this.bddTragos.findIndex(
             (trago) => {
@@ -111,6 +116,17 @@ export class TragosService {
         this.bddTragos[indice] = tragoActualizado;
 
         return this.bddTragos;
-    }
+    }*/
 
+    actualizar(tragoActualizado: Trago, id:number):Promise<UpdateResult> {
+        const objetoEntidad = this._tragosRepository.update(id,
+            {
+                nombre: tragoActualizado.nombre,
+                tipo: tragoActualizado.tipo,
+                gradosAlcohol: tragoActualizado.gradosAlcohol,
+                precio: tragoActualizado.precio,
+                fechaCaducidad: tragoActualizado.fechaCaducidad
+            });
+        return objetoEntidad;
+    }
 }
