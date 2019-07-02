@@ -1,8 +1,9 @@
-import {Body, Controller, Get, Post, Query, Res, Response} from "@nestjs/common";
+import {Body, Controller, Get, Param, Post, Query, Res, Response} from "@nestjs/common";
 import {TragosService} from "./tragos.service";
 import {Trago} from "./interfaces/trago";
 import {TragosCreateDto} from "./dto/tragos.create.dto";
 import {validate} from "class-validator";
+import {TragosUpdateDto} from "./dto/tragos.update.dto";
 
 @Controller('/api/traguito')
 export class TragosController {
@@ -80,7 +81,7 @@ export class TragosController {
             const respuestaCrear = await this._tragosService.crear(trago); //promesa
 
             console.log('Respuesta: ', respuestaCrear);
-            res.redirect('/api/traguito/lista')
+            res.redirect('/api/traguito/lista');
         }
         catch (e) {
             console.error(e);
@@ -99,15 +100,86 @@ export class TragosController {
     }
 
     @Post('eliminar')
-    eliminarTragoPost(
+    async eliminarTragoPost(
         @Body() trago: Trago,
         @Res() res,
     ) {
-        trago.id = Number(trago.id);
 
-        this._tragosService.eliminarPorId(trago.id);
+        try {
+            const respuestaEliminar = await this._tragosService.eliminar(trago.id); //promesa
 
-        res.redirect('/api/traguito/lista')
+            console.log('Respuesta: ', respuestaEliminar);
+            res.redirect('/api/traguito/lista');
+            /*trago.id = Number(trago.id);
 
+            this._tragosService.eliminarPorId(trago.id);
+
+            res.redirect('/api/traguito/lista')*/
+        }
+        catch (e) {
+                console.error(e);
+                res.status(500);
+                res.send({mensaje: 'Error', codigo: 500})
+            }
     }
+
+
+    @Get('editar/:id')
+    editarTrago(
+        @Res() res,
+        @Param() param,
+        @Query('mensaje') mensaje: string,
+    ) {
+        res.render(
+            'tragos/crear-editar', {
+                mensaje: mensaje
+            }
+        )
+    }
+
+
+
+    @Post('editar')
+    async editarTragoPost(
+        @Body() trago: Trago,
+        @Res() res,
+    ) {
+        trago.gradosAlcohol = Number(trago.gradosAlcohol);
+        trago.precio = Number(trago.precio);
+        trago.fechaCaducidad = trago.fechaCaducidad ? new Date(trago.fechaCaducidad) : undefined;
+
+        let tragoAValidar = new TragosUpdateDto();
+
+        tragoAValidar.nombre = trago.nombre;
+        tragoAValidar.tipo = trago.tipo;
+        tragoAValidar.fechaCaducidad = trago.fechaCaducidad;
+        tragoAValidar.precio = trago.precio;
+        tragoAValidar.gradosAlcohol = trago.gradosAlcohol;
+
+        try {
+            const errores = await validate(tragoAValidar);
+
+            if (errores.length > 0) {
+                console.error(errores);
+                res.redirect('/api/traguito/editar/'+trago.id+'?mensaje=Tienes un error en el formulario&campos=nombre');
+            } else {
+
+                const respuestaEditar = await this._tragosService
+                    .actualizar(trago, trago.id); // Promesa
+
+                console.log('RESPUESTA: ', respuestaEditar);
+
+                res.redirect('/api/traguito/lista');
+            }
+        }
+        catch (e) {
+            console.error(e);
+            res.status(500);
+            res.send({mensaje: 'Error', codigo: 500})
+        }
+    }
+
+
+
+
 }

@@ -43,10 +43,17 @@
         <td> <%=trago.precio%> </td>
         <td> <%=trago.tipo%> </td>
         <td>
-            <button>Editar</button>
-            <a href="/api/traguito/lista">
-                <button>Eliminar</button>
+
+            <a href="/api/traguito/editar/<%=trago.id%>" method="GET">
+                <input type="number" name="id" value="<%=trago.id%>" hidden>
+                <button>Editar</button>
             </a>
+            <form action="/api/traguito/eliminar" method="POST">
+
+                <input type="number" name="id" value="<%=trago.id%>" hidden>
+                <button>Eliminar</button>
+
+            </form>
         </td>
     </tr>
     <% })%>
